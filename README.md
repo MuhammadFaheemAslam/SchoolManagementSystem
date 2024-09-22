@@ -3,8 +3,14 @@ This repository contains a comprehensive School Management System built using th
 <br>
 
 Key Features:
+<br>
 User Authentication: Secure login for students, teachers, and administrators.
+<br>
 Student Management: Enroll, update, and track student information.
+<br>
 Attendance Tracking: Easily manage and report student attendance.
+<br>
 Grade Management: Record and analyze student performance.
+<br>
 Course Management: Create and manage courses, schedules, and faculty assignments.
+<br>
