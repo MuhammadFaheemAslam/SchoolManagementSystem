@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block body %}
+{% comment %} {%block content %} {% endcomment %}
+<div class="content container-fluid">
+    <div class="page-header">
+       <div class="row align-items-center">
+          <div class="col">
+             <h3 class="page-title">Students Record</h3>
+             <ul class="breadcrumb">
+                <li class="breadcrumb-item active">All Students Records</li>
+             </ul>
+          </div>
+          <div class="col-auto text-right float-right ml-auto">
+             <a href="#" class="btn btn-outline-primary mr-2"><i class="fas fa-download"></i> Download</a>
+             {% comment %} <a href="add-student.html" class="btn btn-primary"><i class="fas fa-plus"></i></a> {% endcomment %}
+          </div>
+       </div>
+    </div>
+    <div class="row">
+       <div class="col-sm-12">
+          <div class="card card-table">
+             <div class="card-body">
+                <div class="table-responsive">
+                   <table class="table table-hover table-center mb-0 datatable">
+                     <thead>
+                        <tr>
+                          <th scope="col">Roll Number</th>
+                          <th scope="col">Student Name</th>
+                          <th scope="col">Father Name</th>
+                          <th scope="col">Class</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Gender</th>
+                          <th scope="col">Age</th>             
+                          <th class="text-right">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-group-divider">
+                        {% if students %}
+                        {% for student in students %}
+                          <tr>
+                            <td>{{student.rollnumber}}</d>
+                            <td>{{ student.first_name }}  {{ student.last_name }}</td>
+                            <td>{{student.father_name}}</d>
+                            <td>{{student.classs}}</d>
+                            <td>{{ student.email }}</td>
+                            <td>{{ student.gender }}</td>
+                            <td>{{ student.age }}</td>
+                            <td class="text-right">
+                              <div class="actions">
+                                <a href="{% url 'student_detail' student.id %}" class="btn btn-sm bg-success-light mr-2" data-bs-toggle="tooltip" title="See Student Details">
+                                  <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                  </a>
+                                  <a href="edit-student.html" class="btn btn-sm bg-success-light mr-2" data-bs-toggle="tooltip" title="Edit Student">
+                                  <i class="fas fa-pen"></i>
+                                  </a>
+                                  <a href="#" class="btn btn-sm bg-danger-light" data-bs-toggle="tooltip" title="Delete Student">
+                                  <i class="fas fa-trash"></i>
+                                  </a>
+                              </div>
+                            </td>
+                          </tr> 
+                        {% endfor %}
+                        {% else %}
+                        <h5 class="alert alert-primary">No Student Records</h5>
+                      {% endif %}
+                      </tbody>
+                   </table>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+{% endblock %}

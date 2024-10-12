@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -13,8 +14,7 @@ SECRET_KEY = 'django-insecure-fe42&gz)r%)9tjb)rmhwvk_-tw=1$(-ygjmx1@qmz6bg3byzyj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -104,9 +104,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT ='/static/'
+
+STATICFILES_DIRS =[
+    os.path.join(BASE_DIR, 'SchoolApp/static')
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'SchoolApp.Customuser'
+
+# # settings.py
+# AUTHENTICATION_BACKENDS = [
+#     'SchoolApp.EmailBackEnd',  # Replace with the actual path to EmailBackEnd
+#     'django.contrib.auth.backends.ModelBackend',  # Include the default backend
+# ]
+

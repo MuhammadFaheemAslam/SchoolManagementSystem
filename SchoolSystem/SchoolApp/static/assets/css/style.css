@@ -58,6 +58,25 @@ h6 {
 	font-family: 'Poppins', sans-serif;
 	margin-top: 0;
 }
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    border-radius: 10px;  /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+}
+
+.btn {
+    border-radius: 5px;  /* Button corner radius */
+}
+
+.form-label {
+    font-weight: 500;  /* Label font weight */
+}
+
+
 a:hover,
 a:active,
 a:focus {
@@ -1123,6 +1142,8 @@ div.dataTables_wrapper div.dataTables_info {
 	border-width: 2px 0 0 0;
 }
 
+
+
 /*-----------------
 	7. Components
 -----------------------*/
@@ -1342,7 +1363,7 @@ div.dataTables_wrapper div.dataTables_info {
 -----------------------*/
 
 .header {
-	background-color: #fff;
+	background-color:#dee3e3;
 	border-bottom: 1px solid #f3f3f4;
 	left: 0;
 	position: fixed;
@@ -1359,7 +1380,7 @@ div.dataTables_wrapper div.dataTables_info {
     width: 320px;
     z-index: 1;
     transition: all 0.2s ease-in-out;
-    background-color: #f7f7fa;
+    background-color: #c1c3c4;
     border-bottom: 1px solid #efefef;
 	border-right: 1px solid #ececf5;
     display: flex;
@@ -1830,6 +1851,28 @@ footer p {
     color: #333;
     margin-bottom: 5px;
 }
+
+.profile-pic {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 3px solid #6c757d;
+}
+.profile-header {
+	text-align: center;
+	padding: 20px;
+	background-color: #f8f9fa;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+.profile-details {
+	padding: 20px;
+	background-color: #ffffff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+}
+
 
 /*-----------------
 	12. Login
